@@ -20,15 +20,28 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>q', '<CMD>qa<CR>', { silent = true })
 vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { silent = true })
 vim.keymap.set('n', '<leader>bc', '<CMD>q<CR>', { silent = true })
+
 vim.keymap.set('n', '<leader>hl', '<CMD>noh<CR>', { silent = true })
-    -- UI keymaps
-vim.keymap.set('n', '<leader>uw', '<CMD>set wrap!<CR>', { silent = true })
+
 vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
+
+vim.keymap.set('n', ']b', 'gt', { silent = true })
+vim.keymap.set('n', '[b', 'gT', { silent = true })
+
 vim.keymap.set('n', '<M-l>', '<C-w>>', { silent = true })
 vim.keymap.set('n', '<M-h>', '<C-w><', { silent = true })
+
+vim.keymap.set('n', '<leader>uw', '<CMD>set wrap!<CR>', { silent = true })
+
+vim.keymap.set('n', '<M-j>', '<CMD>m .+1<CR>==', { silent = true })
+vim.keymap.set('n', '<M-k>', '<CMD>m .-2<CR>==', { silent = true })
+
+vim.keymap.set('v', '<M-j>', "<CMD>m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', '<M-k>', "<CMD>m '<-2<CR>gv=gv", { silent = true })
+
 vim.keymap.set('i', 'jk', '<ESC>', { silent = true })
 
 -- Clipboard default implementation
