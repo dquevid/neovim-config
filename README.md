@@ -1,4 +1,4 @@
-### Features
+## Features
 
 - Plugin manager (lazy.nvim)
 - LSP (Mason, none-ls)
@@ -6,7 +6,7 @@
 - Fuzzy finding (Telescope)
 - Syntax highlighting (Treesitter)
 
-### Configuration
+## Configuration
 
     leader = <space>    
 
@@ -38,9 +38,9 @@
 |-                      |-
 |Escape                 |`jk`
 
-### Installation
+## Installation
 
-#### Prerequisites
+### Prerequisites
 
 Make sure to have these installed:
 
@@ -53,7 +53,7 @@ Backup your current nvim config and plugins:
     mv ~/.local/share/nvim ~/.local/share/nvim.bak
     mv ~/.cache/nvim ~/.cache/nvim.bak
 
-#### Install
+### Install
 
     git clone https://github.com/dquevid/neovim-config ~/.config/nvim/
     nvim
