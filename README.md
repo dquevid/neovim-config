@@ -17,19 +17,21 @@ Make sure to have these installed:
 - `git`
 
 Backup your current nvim config and plugins:
-
-    mv ~/.config/nvim ~/.config/nvim.bak
-    mv ~/.local/share/nvim ~/.local/share/nvim.bak
-    mv ~/.cache/nvim ~/.cache/nvim.bak
+```shell
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+```
 
 ### Install
-
-    git clone https://github.com/dquevid/neovim-config ~/.config/nvim/
-    nvim
+```shell
+git clone https://github.com/dquevid/neovim-config ~/.config/nvim/
+nvim
+```
 
 ## Configuration
 
-    leader = <space>    
+    leader = <space>
 
 ### Mappings
 
