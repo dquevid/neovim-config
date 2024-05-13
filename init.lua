@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup
 require("neovim-configuration")
-require("test_lsp")
 require("lazy").setup("plugins", {
 	change_detection = { notify = false },
 })
