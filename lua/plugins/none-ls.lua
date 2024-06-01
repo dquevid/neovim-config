@@ -1,19 +1,49 @@
 return {
-	"nvimtools/none-ls.nvim",
-    dependencies = {
-        "nvimtools/none-ls-extras.nvim",
-    },
-	config = function()
-		local null_ls = require("null-ls")
-		null_ls.setup({
-			sources = {
-				null_ls.builtins.formatting.stylua,
-                null_ls.builtins.formatting.biome,
-                null_ls.builtins.diagnostics.golangci_lint,
-                require("none-ls.diagnostics.eslint_d"),
-			},
-		})
-
-		vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { silent = true })
-	end,
+    -- "nvimtools/none-ls.nvim",
+    -- dependencies = {
+    --     "nvimtools/none-ls-extras.nvim",
+    -- },
+    -- config = function()
+    --     local null_ls = require("null-ls")
+    --     null_ls.setup({
+    --         sources = {
+    --             null_ls.builtins.formatting.prettierd,
+    --             require("none-ls.diagnostics.eslint_d").with({
+    --                 method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
+    --                 args = {
+    --                     "--no-ignore",
+    --                     "$FILENAME"
+    --                 },
+    --                 filetypes = {
+    --                 	"javascript",
+    --                 	"javascriptreact",
+    --                 	"typescript",
+    --                 	"typescriptreact",
+    --                 	"markdown",
+    --                 	"vue",
+    --                 	"html",
+    --                 	"css",
+    --                 },
+    --                 condition = function(utils)
+    --                     vim.env.ESLINT_USE_FLAT_CONFIG = 'true'
+    --                     return utils.root_has_file(
+    --                         {
+    --                             "eslint.config.js",
+    --                             "eslint.config.cjs",
+    --                             -- https://eslint.org/docs/user-guide/configuring/configuration-files#configuration-file-formats
+    --                             ".eslintrc",
+    --                             ".eslintrc.js",
+    --                             ".eslintrc.cjs",
+    --                             ".eslintrc.yaml",
+    --                             ".eslintrc.yml",
+    --                             ".eslintrc.json",
+    --                             "package.json"
+    --                         }
+    --                     )
+    --                 end,
+    --             }),
+    --         },
+    --     })
+    --     vim.keymap.set({ "n", "v" }, "<leader>cf", vim.lsp.buf.format, { silent = true, desc = 'Format current file' })
+    -- end,
 }

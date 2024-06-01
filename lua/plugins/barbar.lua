@@ -6,9 +6,9 @@ return {
     },
     init = function()
         vim.g.barbar_auto_setup = false
-        vim.keymap.set("n", "<leader>bc", "<CMD>BufferClose<CR>", { silent = true })
-        vim.keymap.set("n", "]b", "<CMD>BufferNext<CR>", { silent = true })
-        vim.keymap.set("n", "[b", "<CMD>BufferPrevious<CR>", { silent = true })
+        vim.keymap.set("n", "<leader>bc", "<CMD>BufferClose<CR>", { silent = true, desc = 'Close buffer' })
+        vim.keymap.set("n", "]b", "<CMD>BufferNext<CR>", { silent = true, desc = 'Next buffer' })
+        vim.keymap.set("n", "[b", "<CMD>BufferPrevious<CR>", { silent = true, desc = 'Previous buffer' })
 return {
 }
     end,
@@ -24,7 +24,7 @@ return {
                 align = "center", -- *optionally* specify an alignment (either 'left', 'center', or 'right')
             },
             -- Or, specify the event which the sidebar executes when leaving:
-            ["neo-tree"] = { event = "BufWipeout" },
+            ["neo-tree"] = true,
             -- Or, specify all three
             Outline = { event = "BufWinLeave", text = "symbols-outline", align = "right" },
         },
