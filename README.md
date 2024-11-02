@@ -55,10 +55,10 @@ nvim
 | Right window    | `<C-l>`      |
 | Next buffer     | `]b`         |
 | Previous buffer | `[b`         |
-| Shrink window   | `<M-h>`      |
-| Grow window     | `<M-l>`      |
-| Shrink window   | `<M-j>`      |
-| Grow window     | `<M-k>`      |
+| Shrink window horizontally   | `<M-h>`      |
+| Grow window horizontally     | `<M-l>`      |
+| Shrink window vertically   | `<M-j>`      |
+| Grow window vertically     | `<M-k>`      |
 | Toggle wrap     | `<leader>uw` |
 | Move line down  | `<M-j>`      |
 | Move line up    | `<M-k>`      |
