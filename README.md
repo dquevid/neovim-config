@@ -119,7 +119,7 @@ nvim
 
 | Action     | Command      |
 | ---------- | ------------ |
-| Open mason | `<leader>pm` |
+| Open mason | `<leader>pM` |
 
 ### nvim-lspconfig
 
