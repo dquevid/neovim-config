@@ -5,10 +5,13 @@ return {
 		local lint = require('lint')
 
 		lint.linters.eslint_d.args = {
-			'--no-ignore',
-			'--stdin',
-			'--stdin-filename',
-		}
+			'--no-warn-ignored',
+            '--format', 'json',
+			'--stdin', '--stdin-filename',
+            function()
+                return vim.api.nvim_buf_get_name(0)
+            end,
+        }
 
 		lint.linters.eslint_d.env = {
 			ESLINT_USE_FLAT_CONFIG = 'true',

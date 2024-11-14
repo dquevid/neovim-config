@@ -16,15 +16,15 @@ local servers = {
 				library = {
 					vim.env.VIMRUNTIME,
 					-- Depending on the usage, you might want to add additional paths here.
-					-- "${3rd}/luv/library"
-					-- "${3rd}/busted/library",
+					"${3rd}/luv/library",
+					"${3rd}/busted/library",
 				},
 				-- or pull in all of 'runtimepath'. NOTE: this is a lot slower
 				-- library = vim.api.nvim_get_runtime_file("", true)
 			},
 		})
 	end,
-	["tsserver"] = function() end,
+	["ts_ls"] = function() end,
 	["emmet_language_server"] = function() end,
 	["pyright"] = function() end,
 	["gopls"] = function() end,
@@ -79,7 +79,6 @@ return {
 			vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { silent = true, desc = "Show diagnostic" })
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { silent = true, desc = "Previous diagnostic" })
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { silent = true, desc = "Next diagnostic" })
-			vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float, { silent = true, desc = "Show diagnostic" })
 		end,
 	},
 }
