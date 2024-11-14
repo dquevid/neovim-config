@@ -7,7 +7,7 @@ return {
             background_colour = "#000000",
         })
 
-		vim.keymap.set("n", "<leader>nc", function()
+		vim.keymap.set("n", "<leader>unc", function()
 			require("notify").dismiss({ silent = true, pending = true })
 		end, { desc = "Clear all notifications" })
 	end,

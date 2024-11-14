@@ -35,7 +35,7 @@ return {
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
-			vim.keymap.set("n", "<leader>pm", "<CMD>Mason<CR>", { silent = true })
+			vim.keymap.set("n", "<leader>pM", "<CMD>Mason<CR>", { silent = true })
 		end,
 	},
 	{
@@ -73,10 +73,10 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true, desc = "Hover" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { silent = true, desc = "Go to definition" })
 
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { silent = true, desc = "Code action" })
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { silent = true, desc = "Code actions" })
 			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { silent = true, desc = "Rename symbol" })
 
-			vim.keymap.set("n", "<leader>dd", vim.diagnostic.open_float, { silent = true, desc = "Show diagnostic" })
+			vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { silent = true, desc = "Show diagnostic" })
 			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { silent = true, desc = "Previous diagnostic" })
 			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { silent = true, desc = "Next diagnostic" })
 		end,

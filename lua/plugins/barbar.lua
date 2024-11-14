@@ -7,7 +7,8 @@ return {
 	config = function()
 		vim.g.barbar_auto_setup = false
 
-		vim.api.nvim_set_hl(0, 'BufferInactive', { bg = '' })
+		vim.api.nvim_set_hl(0, 'BufferInactive', { bg = '', fg = '#aaaaaa' })
+		vim.api.nvim_set_hl(0, 'BufferInactiveSign', { bg = '', fg = '' })
 
 		require('barbar').setup({
 			animation = false,
@@ -25,8 +26,8 @@ return {
                 },
                 inactive = {
                     separator = {
-                        left = '',
-                        right = '',
+                        left = ' ',
+                        right = ' ',
                     },
                 },
             },

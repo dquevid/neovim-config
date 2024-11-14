@@ -15,7 +15,7 @@ return {
                     }
                 }
             })
-	        vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeToggle<CR>', { silent = true, nowait = true })
+	        vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeToggle<CR>', { silent = true, nowait = true, desc = 'Toggle file explorer' })
 		end,
 	},
 	-- {
