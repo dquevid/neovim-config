@@ -7,6 +7,9 @@ return {
 	config = function()
 		vim.g.barbar_auto_setup = false
 
+		vim.api.nvim_set_hl(0, 'BufferCurrent', { bg = '' })
+		vim.api.nvim_set_hl(0, 'BufferVisible', { bg = '' })
+		vim.api.nvim_set_hl(0, 'BufferAlternate', { bg = '' })
 		vim.api.nvim_set_hl(0, 'BufferInactive', { bg = '', fg = '#aaaaaa' })
 		vim.api.nvim_set_hl(0, 'BufferInactiveSign', { bg = '', fg = '' })
 
@@ -14,23 +17,23 @@ return {
 			animation = false,
 			auto_hide = 1,
 
-            icons = {
-                modified = {
-                    button = '',
-                },
-                separator_at_end = false,
-                button = false,
-                separator = {
-                    left = '|',
-                    right = '|',
-                },
-                inactive = {
-                    separator = {
-                        left = ' ',
-                        right = ' ',
-                    },
-                },
-            },
+			icons = {
+				modified = {
+					button = '',
+				},
+				separator_at_end = false,
+				button = false,
+				separator = {
+					left = '|',
+					right = '|',
+				},
+				inactive = {
+					separator = {
+						left = ' ',
+						right = ' ',
+					},
+				},
+			},
 
 			sidebar_filetypes = {
 				-- Use the default values: {event = 'BufWinLeave', text = '', align = 'left'}
